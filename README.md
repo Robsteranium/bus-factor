@@ -1,8 +1,8 @@
 # Calculate your Bus Factor - An introduction to GNU-R
 
-This repo contains both the code for calculating your bus factor and the slides from the presentation.
+!(thumbnail ./slides/pictures/thumbnail.png) This repo contains both the code for calculating your bus factor and the slides from the presentation.
 
-## Calculating you Bus Factor
+## Calculating your Bus Factor
 
 ### Install R and RStudio
 
@@ -38,9 +38,9 @@ The slides are build with the [Shower Framework](http://shwr.me) with an extra g
 
 To rebuild the slides:
 
-  cd slides
-  npm install
-  gulp prepare
+    cd slides
+    npm install
+    gulp prepare
 
 Optionally you can use `gulp watch` to have them automatically rebuilt every time you save the `index.haml` or `css/extra.css` files.
 
