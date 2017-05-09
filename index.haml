@@ -74,22 +74,23 @@
         %li Comparing some open source projects
     %section.slide
       %h2 What is the Bus Factor?
-      %p.note The bus factor is the number of developers that would need to be hit by a bus before a project is in serious trouble.
-      %p.note A low bus factor means that knowledge is concentrated in a few vital people.
-      %p.note A high bus factor means that a broad range of individuals know enough to carry on even if others leave.
+      %p.next The bus factor is the number of developers that would need to be hit by a bus before a project is in serious trouble.
+      %p.next A low bus factor means that knowledge is concentrated in a few vital people.
+      %p.next A high bus factor means that a broad range of individuals know enough to carry on even if others leave.
     %section.slide
       %h2 Why should you listen to this talk?!
-      %p.note Find out if the kernel could cope without Torvalds
-      %p.note Compare your work to successful open source projects
-      %p.note Read between the lines - learn about your code base with data analysis
+      %p.next Find out if the kernel could cope without Torvalds
+      %p.next Compare your work to successful open source projects
+      %p.next Read between the lines - learn about your code base with data analysis
     %section.slide
       %h2 Look with your fingers
-      %p
-        Slides
-        %a(href="http://robsteranium.github.io/presentations/bus-factor") robsteranium.github.io/presentations/bus-factor 
-      %p
-        Code
-        %a(href="https://github.com/robsteranium/bus-factor") github.com/robsteranium/bus-factor 
+      %ul
+        %li
+          %strong="Slides: "
+          %a(href="http://robsteranium.github.io/presentations/bus-factor") robsteranium.github.io/presentations/bus-factor 
+        %li
+          %strong="Code: "
+          %a(href="https://github.com/robsteranium/bus-factor") github.com/robsteranium/bus-factor 
     %section.slide
       %h2 Getting set-up with R
       %img(alt="R logo" src="pictures/r-logo.png" style="float: right; height: 100px")
@@ -404,7 +405,7 @@
         }
         </code>
         <code class="R next">
-        > calculate_bus_factor(ac)
+        > calculate_bus_factor(gnupg_ac)
         0
         </code>
     %section.slide
@@ -468,21 +469,38 @@
         <code class="R">+ theme_xkcd()</code>
       %img(src="pictures/plots/10.png")
     %section.slide
-      %img.cover(src="pictures/plots/robust.png")
+      %img.cover(src="pictures/plots/bus-examples.png")
     %section.slide
-      %img.cover(src="pictures/plots/precarious.png")
+      %img.cover(src="pictures/plots/bus-editor.png")
+    %section.slide
+      %img.cover(src="pictures/plots/bus-db.png")
+    %section.slide
+      %img.cover(src="pictures/plots/bus-web.png")
+    %section.slide
+      %img.cover(src="pictures/plots/bus-cloud.png")
+    %section.slide
+      %img.cover(src="pictures/plots/bus-familiar.png")
+    %section.slide
+      %h2 HeartBleed vulnerability in Open SSL
+      %img(src="pictures/Heartbleed.svg" style="float: right; height: 200px")
+      %ul
+        %li 2011-12-31 Introduced to the source code 
+        %li 2014-04-07 Patch/ disclosure
+        %li 2014-04-24 Core Infrastructure Initiative launched
+    %section.slide
+      %img.cover(src="pictures/plots/openssl-trend.gif")
+    %section.slide
+      %img.cover(src="pictures/plots/openssl-author.png")
+    %section.slide
+      %img.cover(src="pictures/plots/openssl-loc-trend.png")
     %section#cover.slide
       %img.cover(alt="" src="pictures/gp-leaving.png")/
       %h1 Calculate your Bus Factor
-      %p
-        Slides
-        %a(href="http://robsteranium.github.io/presentations/bus-factor") robsteranium.github.io/presentations/bus-factor 
-      %p
-        Code
-        %a(href="https://github.com/robsteranium/bus-factor") github.com/robsteranium/bus-factor 
-      %p
+      %h3
+        %a(href="https://github.com/robsteranium/bus-factor") github.com/robsteranium/bus-factor
+        %br
         %a(href="mailto:robin@infonomics.ltd.uk") robin@infonomics.ltd.uk
-         | 
+        %br
         %a(href="http://twitter.com/robsteranium") @robsteranium
   .progress
   %script(src="node_modules/shower-core/shower.min.js")
