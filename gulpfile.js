@@ -8,8 +8,23 @@ const rsync = require('gulp-rsync');
 const sequence = require('run-sequence');
 const zip = require('gulp-zip');
 const pages = require('gulp-gh-pages');
+const haml = require('gulp-haml');
+const highlight = require('gulp-highlight');
+const watch = require('gulp-watch');
+const batch = require('gulp-batch');
+
 
 gulp.task('prepare', () => {
+        const slides = gulp.src('index.haml')
+                .pipe(haml())
+	        .pipe(replace(
+		  /(<link href=")(node_modules\/shower-material\/)(styles\/screen-16x10.css" rel="stylesheet" \/>)/g,
+	          '$1shower/themes/material/$3', { skipBinary: true }
+		))
+		.pipe(replace(
+		  /(<script src=")(node_modules\/shower-core\/)(shower.min.js"><\/script>)/g,
+		  '$1shower/$3', { skipBinary: true }
+		));
 
 	const shower = gulp.src([
 			'**',
@@ -20,7 +35,9 @@ gulp.task('prepare', () => {
 			'!LICENSE.md',
 			'!README.md',
 			'!gulpfile.js',
-			'!package.json'
+			'!package.json',
+			'!index.haml',
+			'!*~'
 		])
 		.pipe(replace(
 			/(<link rel="stylesheet" href=")(node_modules\/shower-)([^\/]*)\/(.*\.css">)/g,
@@ -64,7 +81,7 @@ gulp.task('prepare', () => {
 			'$1../../$3', { skipBinary: true }
 		));
 
-	return merge(shower, core, themes)
+	return merge(slides, shower, core, themes)
 		.pipe(gulp.dest('prepared'));
 
 });
@@ -94,6 +111,12 @@ gulp.task('publish', (callback) => {
 		'upload',
 		'clean', callback
 	)
+});
+
+gulp.task('watch', () => {
+    watch(['*.haml','css/extra.css'], { ignoreInitial: false }, batch(function (events, done) {
+        gulp.start('prepare', done);
+    }));
 });
 
 gulp.task('clean', () => {

@@ -1,3 +1,32 @@
+# Calculate your Bus Factor - An introduction to GNU-R
+
+This repo contains both the slides and some background notes here with extra links etc.
+
+## Install R and RStudio
+
+Install [R](https://cran.r-project.org/) and the [RStudio graphical user interface](https://www.rstudio.com/products/rstudio/download/) then start RStudio.
+
+Windows users:
+
+- [Download R for Windows](https://cran.r-project.org/bin/windows/base/R-3.3.3-win.exe)
+- [Download RStudio for Windows](https://download1.rstudio.org/RStudio-1.0.136.exe)
+
+Mac users:
+
+- [Download R for Mavericks](https://cran.r-project.org/bin/macosx/R-3.3.3.pkg)
+- [Download RStudio for OSX 10.6+](https://download1.rstudio.org/RStudio-1.0.136.dmg)
+
+Linux users:
+
+- [R binary packages](https://cran.r-project.org/bin/linux/) or search your package manager (e.g. `r-base` in ubuntu)
+- [RStudio binaries](https://www.rstudio.com/products/rstudio/download/)
+
+
+
+
+
+-----
+
 # Shower Presentation Template [![Build Status](https://travis-ci.org/shower/shower.svg?branch=master)](https://travis-ci.org/shower/shower)
 
 <img src="pictures/logo.png" width="250" alt="Shower logo">
