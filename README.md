@@ -1,6 +1,8 @@
-# Calculate your Bus Factor - An introduction to GNU-R
+<img align="right" src="./slides/pictures/thumbnail.png" />
 
-!(thumbnail ./slides/pictures/thumbnail.png) This repo contains both the code for calculating your bus factor and the slides from the presentation.
+# Calculate your Bus Factor <br /> An introduction to GNU-R
+
+This repo contains both the code for calculating your bus factor and the slides from the presentation.
 
 ## Calculating your Bus Factor
 
